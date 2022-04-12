@@ -3,6 +3,7 @@ const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p
 
 
 document.getElementById("getValue").addEventListener("input", setName);
+//document.getElementById("btn").addEventListener("onmousedown ", moveButton);
 document.getElementById("btn").addEventListener("click", selectName);
 
 document.getElementById("getValue").max = (Math.pow(26,6)-1);
@@ -55,5 +56,15 @@ function getWords(x){
     return outStr;
 }
 
+
+function moveButton(){
+    let b = document.getElementById("btn");
+    b.style.position = "absolute";
+    b.style.left = Math.floor(Math.random() * document.body.clientWidth) +'px';
+    b.style.top = Math.floor(Math.random() * document.body.clientHeight) +'px';
+    
+}
+
 //run at start
 window.addEventListener("DOMContentLoaded", (event) => setName());
+
